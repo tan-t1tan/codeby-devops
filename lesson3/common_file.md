@@ -1,1 +1,1 @@
-cum on file 
+izmenil v vetke B 
