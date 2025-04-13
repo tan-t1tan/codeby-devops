@@ -1,1 +1,1 @@
-izmenil v vetke B 
+izmenil v vetke A 
