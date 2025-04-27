@@ -1,0 +1,388 @@
+Script started on 2025-04-20 19:10:08+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="67" LINES="17"]
+[?2004h]0;tan@ububa: ~/temp[01;32mtan@ububa[00m:[01;34m~/temp[00m$ ps -ef
+[?2004lUID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 16:14 ?        00:00:05 /sbin/init spla
+root           2       0  0 16:14 ?        00:00:00 [kthreadd]
+root           3       2  0 16:14 ?        00:00:00 [pool_workqueue
+root           4       2  0 16:14 ?        00:00:00 [kworker/R-rcu_
+root           5       2  0 16:14 ?        00:00:00 [kworker/R-sync
+root           6       2  0 16:14 ?        00:00:00 [kworker/R-slub
+root           7       2  0 16:14 ?        00:00:00 [kworker/R-netn
+root          10       2  0 16:14 ?        00:00:00 [kworker/0:0H-e
+root          12       2  0 16:14 ?        00:00:00 [kworker/R-mm_p
+root          13       2  0 16:14 ?        00:00:00 [rcu_tasks_kthr
+root          14       2  0 16:14 ?        00:00:00 [rcu_tasks_rude
+root          15       2  0 16:14 ?        00:00:00 [rcu_tasks_trac
+root          16       2  0 16:14 ?        00:00:00 [ksoftirqd/0]
+root          17       2  0 16:14 ?        00:00:06 [rcu_preempt]
+root          18       2  0 16:14 ?        00:00:00 [rcu_exp_par_gp
+root          19       2  0 16:14 ?        00:00:00 [rcu_exp_gp_kth
+root          20       2  0 16:14 ?        00:00:00 [migration/0]
+root          21       2  0 16:14 ?        00:00:00 [idle_inject/0]
+root          22       2  0 16:14 ?        00:00:00 [cpuhp/0]
+root          23       2  0 16:14 ?        00:00:00 [cpuhp/1]
+root          24       2  0 16:14 ?        00:00:00 [idle_inject/1]
+root          25       2  0 16:14 ?        00:00:00 [migration/1]
+root          26       2  0 16:14 ?        00:00:00 [ksoftirqd/1]
+root          28       2  0 16:14 ?        00:00:00 [kworker/1:0H-e
+root          29       2  0 16:14 ?        00:00:00 [cpuhp/2]
+root          30       2  0 16:14 ?        00:00:00 [idle_inject/2]
+root          31       2  0 16:14 ?        00:00:00 [migration/2]
+root          32       2  0 16:14 ?        00:00:00 [ksoftirqd/2]
+root          34       2  0 16:14 ?        00:00:00 [kworker/2:0H-k
+root          35       2  0 16:14 ?        00:00:00 [cpuhp/3]
+root          36       2  0 16:14 ?        00:00:00 [idle_inject/3]
+root          37       2  0 16:14 ?        00:00:00 [migration/3]
+root          38       2  0 16:14 ?        00:00:00 [ksoftirqd/3]
+root          40       2  0 16:14 ?        00:00:00 [kworker/3:0H-k
+root          41       2  0 16:14 ?        00:00:00 [cpuhp/4]
+root          42       2  0 16:14 ?        00:00:00 [idle_inject/4]
+root          43       2  0 16:14 ?        00:00:00 [migration/4]
+root          44       2  0 16:14 ?        00:00:00 [ksoftirqd/4]
+root          46       2  0 16:14 ?        00:00:00 [kworker/4:0H-e
+root          47       2  0 16:14 ?        00:00:00 [cpuhp/5]
+root          48       2  0 16:14 ?        00:00:00 [idle_inject/5]
+root          49       2  0 16:14 ?        00:00:00 [migration/5]
+root          50       2  0 16:14 ?        00:00:00 [ksoftirqd/5]
+root          52       2  0 16:14 ?        00:00:00 [kworker/5:0H-e
+root          53       2  0 16:14 ?        00:00:00 [cpuhp/6]
+root          54       2  0 16:14 ?        00:00:00 [idle_inject/6]
+root          55       2  0 16:14 ?        00:00:00 [migration/6]
+root          56       2  0 16:14 ?        00:00:00 [ksoftirqd/6]
+root          58       2  0 16:14 ?        00:00:00 [kworker/6:0H-e
+root          59       2  0 16:14 ?        00:00:00 [cpuhp/7]
+root          60       2  0 16:14 ?        00:00:00 [idle_inject/7]
+root          61       2  0 16:14 ?        00:00:00 [migration/7]
+root          62       2  0 16:14 ?        00:00:00 [ksoftirqd/7]
+root          64       2  0 16:14 ?        00:00:00 [kworker/7:0H-e
+root          65       2  0 16:14 ?        00:00:00 [kdevtmpfs]
+root          66       2  0 16:14 ?        00:00:00 [kworker/R-inet
+root          68       2  0 16:14 ?        00:00:00 [kauditd]
+root          69       2  0 16:14 ?        00:00:00 [khungtaskd]
+root          70       2  0 16:14 ?        00:00:00 [oom_reaper]
+root          72       2  0 16:14 ?        00:00:00 [kworker/R-writ
+root          73       2  0 16:14 ?        00:00:00 [kcompactd0]
+root          74       2  0 16:14 ?        00:00:00 [ksmd]
+root          75       2  0 16:14 ?        00:00:00 [khugepaged]
+root          76       2  0 16:14 ?        00:00:00 [kworker/R-kint
+root          77       2  0 16:14 ?        00:00:00 [kworker/R-kblo
+root          78       2  0 16:14 ?        00:00:00 [kworker/R-blkc
+root          79       2  0 16:14 ?        00:00:00 [irq/9-acpi]
+root          81       2  0 16:14 ?        00:00:00 [kworker/R-tpm_
+root          82       2  0 16:14 ?        00:00:00 [kworker/R-ata_
+root          83       2  0 16:14 ?        00:00:00 [kworker/R-md]
+root          84       2  0 16:14 ?        00:00:00 [kworker/R-md_b
+root          85       2  0 16:14 ?        00:00:00 [kworker/R-edac
+root          86       2  0 16:14 ?        00:00:00 [kworker/R-devf
+root          87       2  0 16:14 ?        00:00:00 [watchdogd]
+root          89       2  0 16:14 ?        00:00:00 [kworker/0:1H-k
+root          90       2  0 16:14 ?        00:00:00 [kswapd0]
+root          91       2  0 16:14 ?        00:00:00 [ecryptfs-kthre
+root          92       2  0 16:14 ?        00:00:00 [kworker/R-kthr
+root          94       2  0 16:14 ?        00:00:00 [kworker/R-acpi
+root          95       2  0 16:14 ?        00:00:00 [scsi_eh_0]
+root          96       2  0 16:14 ?        00:00:00 [kworker/R-scsi
+root          97       2  0 16:14 ?        00:00:00 [scsi_eh_1]
+root          98       2  0 16:14 ?        00:00:00 [kworker/R-scsi
+root         101       2  0 16:14 ?        00:00:00 [kworker/R-mld]
+root         102       2  0 16:14 ?        00:00:00 [kworker/R-ipv6
+root         110       2  0 16:14 ?        00:00:00 [kworker/R-kstr
+root         114       2  0 16:14 ?        00:00:00 [kworker/u33:0-
+root         127       2  0 16:14 ?        00:00:00 [kworker/R-char
+root         128       2  0 16:14 ?        00:00:00 [kworker/1:1H-k
+root         131       2  0 16:14 ?        00:00:00 [kworker/2:1H-k
+root         157       2  0 16:14 ?        00:00:00 [kworker/7:1H-k
+root         160       2  0 16:14 ?        00:00:00 [kworker/5:1H-k
+root         190       2  0 16:14 ?        00:00:00 [kworker/4:1H-k
+root         191       2  0 16:14 ?        00:00:00 [kworker/6:1H-k
+root         208       2  0 16:14 ?        00:00:00 [scsi_eh_2]
+root         209       2  0 16:14 ?        00:00:00 [kworker/R-scsi
+root         211       2  0 16:15 ?        00:00:00 [kworker/3:2H-k
+root         259       2  0 16:15 ?        00:00:00 [jbd2/sda2-8]
+root         260       2  0 16:15 ?        00:00:00 [kworker/R-ext4
+root         308       1  0 16:15 ?        00:00:00 /usr/lib/system
+root         331       2  0 16:15 ?        00:00:01 [kworker/7:2-ev
+root         363       1  0 16:15 ?        00:00:00 /usr/lib/system
+root         413       2  0 16:15 ?        00:00:00 [psimon]
+systemd+     530       1  0 16:15 ?        00:00:03 /usr/lib/system
+systemd+     548       1  0 16:15 ?        00:00:00 /usr/lib/system
+root         596       2  0 16:15 ?        00:00:00 [kworker/R-cryp
+root         599       2  0 16:15 ?        00:00:00 [kworker/R-iprt
+root         610       2  0 16:15 ?        00:00:00 [irq/18-vmwgfx]
+root         611       2  0 16:15 ?        00:00:00 [kworker/R-ttm]
+systemd+     858       1  0 16:15 ?        00:00:00 /usr/lib/system
+avahi        895       1  0 16:15 ?        00:00:00 avahi-daemon: r
+message+     896       1  0 16:15 ?        00:00:05 @dbus-daemon --
+gnome-r+     899       1  0 16:15 ?        00:00:00 /usr/libexec/gn
+polkitd      905       1  0 16:15 ?        00:00:01 /usr/lib/polkit
+root         908       1  0 16:15 ?        00:00:00 /usr/libexec/po
+root         916       1  0 16:15 ?        00:00:04 /usr/lib/snapd/
+root         920       1  0 16:15 ?        00:00:00 /usr/libexec/ac
+root         921       1  0 16:15 ?        00:00:00 /usr/sbin/cron 
+root         922       1  0 16:15 ?        00:00:00 /usr/libexec/sw
+root         924       1  0 16:15 ?        00:00:01 /usr/lib/system
+root         925       1  0 16:15 ?        00:00:00 /usr/libexec/ud
+avahi        929     895  0 16:15 ?        00:00:00 avahi-daemon: c
+root         963       1  0 16:15 ?        00:00:00 /usr/sbin/Netwo
+root         964       1  0 16:15 ?        00:00:00 /usr/sbin/wpa_s
+syslog       968       1  0 16:15 ?        00:00:00 /usr/sbin/rsysl
+root        1016       1  0 16:15 ?        00:00:00 /usr/sbin/Modem
+root        1266       1  0 16:15 ?        00:00:08 /usr/bin/VBoxDR
+root        1268       1  0 16:15 ?        00:00:02 /usr/sbin/VBoxS
+root        1363       1  0 16:15 ?        00:00:00 /usr/sbin/cupsd
+root        1366       1  0 16:15 ?        00:00:00 /usr/bin/python
+lp          1379    1363  0 16:15 ?        00:00:00 /usr/lib/cups/n
+root        1381       1  0 16:15 ?        00:00:00 /usr/sbin/gdm3
+cups-br+    1396       1  0 16:15 ?        00:00:00 /usr/sbin/cups-
+kernoops    1400       1  0 16:15 ?        00:00:00 /usr/sbin/kerne
+kernoops    1404       1  0 16:15 ?        00:00:00 /usr/sbin/kerne
+rtkit       1455       1  0 16:15 ?        00:00:00 /usr/libexec/rt
+colord      1560       1  0 16:15 ?        00:00:00 /usr/libexec/co
+root        1615       1  0 16:15 ?        00:00:02 /usr/libexec/up
+root        1957    1381  0 16:15 ?        00:00:00 gdm-session-wor
+tan         1973       1  0 16:15 ?        00:00:01 /usr/lib/system
+tan         1979    1973  0 16:15 ?        00:00:00 (sd-pam)
+tan         1990    1973  0 16:15 ?        00:00:05 /usr/bin/pipewi
+tan         1991    1973  0 16:15 ?        00:00:00 /usr/bin/pipewi
+tan         1994    1973  0 16:15 ?        00:00:04 /usr/bin/wirepl
+tan         1996    1973  0 16:15 ?        00:00:03 /usr/bin/pipewi
+tan         1998    1973  0 16:15 ?        00:00:00 /usr/bin/gnome-
+tan         2008    1973  0 16:15 ?        00:00:02 /usr/bin/dbus-d
+tan         2031    1973  0 16:15 ?        00:00:00 /usr/libexec/xd
+tan         2045    1973  0 16:15 ?        00:00:00 /usr/libexec/xd
+tan         2060    1957  0 16:15 tty2     00:00:00 /usr/libexec/gd
+root        2065    2031  0 16:15 ?        00:00:00 fusermount3 -o 
+tan         2072    2060  0 16:15 tty2     00:00:00 /usr/libexec/gn
+tan         2145    1973  0 16:15 ?        00:00:00 /usr/libexec/gc
+tan         2151    1973  0 16:15 ?        00:00:00 /usr/libexec/gn
+tan         2169    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2177    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2181    1973  0 16:15 ?        00:00:00 /usr/libexec/gn
+tan         2225    1973 12 16:15 ?        00:21:27 /usr/bin/gnome-
+tan         2228    2181  0 16:15 ?        00:00:00 /usr/libexec/at
+tan         2239    2228  0 16:15 ?        00:00:00 /usr/bin/dbus-d
+tan         2302    1973  0 16:15 ?        00:00:00 /usr/libexec/at
+tan         2322    1973  0 16:15 ?        00:00:00 /usr/libexec/gn
+tan         2329    1973  0 16:15 ?        00:00:00 /usr/libexec/ev
+tan         2342    1973  0 16:15 ?        00:00:00 /usr/bin/gjs -m
+tan         2362    1973  0 16:15 ?        00:00:17 /usr/bin/ibus-d
+tan         2364    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2365    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2369    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2371    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2375    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2379    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2381    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2384    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2385    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2386    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2389    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2399    2181  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2400    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2446    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2452    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2472    2181  0 16:15 ?        00:00:00 /usr/libexec/ev
+tan         2475    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2518    2362  0 16:15 ?        00:00:00 /usr/libexec/ib
+tan         2519    2362  0 16:15 ?        00:00:05 /usr/libexec/ib
+tan         2523    1973  0 16:15 ?        00:00:00 /usr/libexec/ib
+tan         2545    1973  0 16:15 ?        00:00:00 /usr/libexec/go
+tan         2561    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2574    1973  0 16:15 ?        00:00:00 /usr/libexec/go
+tan         2583    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2587    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2599    1973  0 16:15 ?        00:00:00 /usr/libexec/ev
+tan         2604    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2613    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2620    2225  0 16:15 ?        00:00:00 /usr/bin/Xwayla
+tan         2625    1973  0 16:15 ?        00:00:00 /usr/libexec/ev
+tan         2652    2362  0 16:15 ?        00:00:06 /usr/libexec/ib
+tan         2673    1973  0 16:15 ?        00:00:00 /usr/libexec/dc
+tan         2682    2169  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2706    1973  0 16:15 ?        00:00:00 /usr/libexec/xd
+tan         2756    1973  0 16:15 ?        00:00:01 /usr/libexec/tr
+tan         2758    1973  0 16:15 ?        00:00:00 /usr/libexec/xd
+tan         2796    1973  0 16:15 ?        00:00:00 /usr/bin/gjs -m
+tan         2815    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2830    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2843    1973  0 16:15 ?        00:00:00 /usr/libexec/ib
+tan         2851    1973  0 16:15 ?        00:00:00 /usr/bin/VBoxCl
+tan         2853    2225  0 16:15 ?        00:00:00 /usr/libexec/mu
+tan         2854    2851  0 16:15 ?        00:00:00 /usr/bin/VBoxCl
+tan         2877    1973  0 16:15 ?        00:00:00 /usr/bin/VBoxCl
+tan         2878    2877  0 16:15 ?        00:00:01 /usr/bin/VBoxCl
+tan         2896    1973  0 16:15 ?        00:00:00 /usr/libexec/xd
+tan         2909    1973  0 16:15 ?        00:00:00 /snap/snapd-des
+tan         2982    2909  0 16:15 ?        00:00:00 /snap/snapd-des
+tan         3004    2225  3 16:15 ?        00:05:51 /snap/firefox/5
+tan         3177    3004  0 16:15 ?        00:00:00 /snap/firefox/5
+tan         3191    3004  0 16:15 ?        00:00:06 /snap/firefox/5
+tan         3197    3004  0 16:15 ?        00:00:02 /snap/firefox/5
+tan         3245    1973  0 16:15 ?        00:00:00 /usr/bin/snap u
+tan         3544    3004  0 16:15 ?        00:00:01 /snap/firefox/5
+tan         3746    3004  0 16:15 ?        00:00:01 /snap/firefox/5
+tan         3754    3004  0 16:15 ?        00:00:26 /snap/firefox/5
+tan         3999    2181  0 16:16 ?        00:00:00 /usr/bin/update
+root        4315       1  0 16:20 ?        00:00:01 /usr/libexec/fw
+tan         4648    3004  0 16:20 ?        00:01:00 /snap/firefox/5
+tan         4754    3004  0 16:20 ?        00:01:08 /snap/firefox/5
+tan         5350    1998  0 16:37 ?        00:00:00 /usr/bin/ssh-ag
+root        5628       2  0 16:50 ?        00:00:00 [kworker/u33:2]
+tan         5839    3004  0 16:54 ?        00:00:46 /snap/firefox/5
+root        6274       2  0 17:02 ?        00:00:00 [kworker/4:1-ev
+root        7848       2  0 17:18 ?        00:00:00 [psimon]
+root        7854       1  0 17:18 ?        00:00:00 sshd: /usr/sbin
+root        8032       2  0 17:19 ?        00:00:00 [kworker/R-tls-
+tan         8093    1973  0 17:22 ?        00:00:38 /usr/bin/nautil
+tan         8132    2169  0 17:22 ?        00:00:00 /usr/libexec/gv
+tan         8351    3004  0 17:29 ?        00:00:14 /snap/firefox/5
+tan         8638    1973  0 17:36 ?        00:00:00 /usr/bin/python
+tan         8641    8638  0 17:36 ?        00:00:00 /usr/bin/gnome-
+tan         8647    1973  0 17:36 ?        00:00:49 /usr/libexec/gn
+tan         8654    8647  0 17:36 pts/0    00:00:00 bash
+root        8771       2  0 17:40 ?        00:00:00 [kworker/0:1-rc
+tan         8992    3004  0 17:46 ?        00:00:00 /snap/firefox/5
+root        9041       2  0 17:47 ?        00:00:16 [kworker/u32:2-
+tan         9070    3004  0 17:47 ?        00:00:00 /snap/firefox/5
+root        9130       2  0 17:48 ?        00:00:00 [kworker/5:1-ev
+tan         9253    3004  0 17:54 ?        00:00:00 /snap/firefox/5
+root        9392       2  0 18:00 ?        00:00:00 [kworker/7:0-cg
+root        9689       2  0 18:10 ?        00:00:00 [kworker/5:2-cg
+root        9933       2  0 18:22 ?        00:00:00 [kworker/3:1-ev
+root        9974       2  0 18:26 ?        00:00:00 [kworker/2:2-ev
+root       10037       2  0 18:30 ?        00:00:00 [kworker/3:0-ev
+root       10122       2  0 18:32 ?        00:00:00 [kworker/1:1-mm
+root       10263       2  0 18:38 ?        00:00:02 [kworker/u32:1-
+tan        10392    2225  0 18:48 ?        00:00:00 gjs /usr/share/
+root       10494       2  0 18:49 ?        00:00:00 [kworker/2:1-ev
+root       10560       2  0 18:50 ?        00:00:00 [kworker/4:3-ev
+root       10705       2  0 18:53 ?        00:00:00 [kworker/6:0-mm
+root       10825       2  0 18:57 ?        00:00:00 [kworker/0:0-ev
+root       10853       2  0 19:00 ?        00:00:00 [kworker/6:1-ev
+root       10868       2  0 19:00 ?        00:00:00 [kworker/1:3]
+root       10873       2  0 19:00 ?        00:00:00 [kworker/u32:0-
+tan        10897    1973  0 19:01 ?        00:00:00 /usr/bin/python
+tan        10900   10897  0 19:01 ?        00:00:00 /usr/bin/gnome-
+tan        10906    8647  0 19:01 pts/1    00:00:00 bash
+root       11037       2  0 19:10 ?        00:00:00 [kworker/5:0-cg
+tan        11038   10906  0 19:10 pts/1    00:00:00 script ps-log.t
+tan        11039   11038  0 19:10 pts/2    00:00:00 bash -i
+root       11045       2  0 19:10 ?        00:00:00 [kworker/u32:3-
+tan        11047   11039  0 19:10 pts/2    00:00:00 ps -ef
+[?2004h]0;tan@ububa: ~/temp[01;32mtan@ububa[00m:[01;34m~/temp[00m$ ps -f -u tan
+[?2004lUID          PID    PPID  C STIME TTY          TIME CMD
+tan         1973       1  0 16:15 ?        00:00:01 /usr/lib/system
+tan         1979    1973  0 16:15 ?        00:00:00 (sd-pam)
+tan         1990    1973  0 16:15 ?        00:00:05 /usr/bin/pipewi
+tan         1991    1973  0 16:15 ?        00:00:00 /usr/bin/pipewi
+tan         1994    1973  0 16:15 ?        00:00:04 /usr/bin/wirepl
+tan         1996    1973  0 16:15 ?        00:00:03 /usr/bin/pipewi
+tan         1998    1973  0 16:15 ?        00:00:00 /usr/bin/gnome-
+tan         2008    1973  0 16:15 ?        00:00:02 /usr/bin/dbus-d
+tan         2031    1973  0 16:15 ?        00:00:00 /usr/libexec/xd
+tan         2045    1973  0 16:15 ?        00:00:00 /usr/libexec/xd
+tan         2060    1957  0 16:15 tty2     00:00:00 /usr/libexec/gd
+tan         2072    2060  0 16:15 tty2     00:00:00 /usr/libexec/gn
+tan         2145    1973  0 16:15 ?        00:00:00 /usr/libexec/gc
+tan         2151    1973  0 16:15 ?        00:00:00 /usr/libexec/gn
+tan         2169    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2177    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2181    1973  0 16:15 ?        00:00:00 /usr/libexec/gn
+tan         2225    1973 12 16:15 ?        00:21:29 /usr/bin/gnome-
+tan         2228    2181  0 16:15 ?        00:00:00 /usr/libexec/at
+tan         2239    2228  0 16:15 ?        00:00:00 /usr/bin/dbus-d
+tan         2302    1973  0 16:15 ?        00:00:00 /usr/libexec/at
+tan         2322    1973  0 16:15 ?        00:00:00 /usr/libexec/gn
+tan         2329    1973  0 16:15 ?        00:00:00 /usr/libexec/ev
+tan         2342    1973  0 16:15 ?        00:00:00 /usr/bin/gjs -m
+tan         2362    1973  0 16:15 ?        00:00:17 /usr/bin/ibus-d
+tan         2364    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2365    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2369    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2371    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2375    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2379    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2381    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2384    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2385    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2386    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2389    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2399    2181  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2400    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2446    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2452    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2472    2181  0 16:15 ?        00:00:00 /usr/libexec/ev
+tan         2475    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2518    2362  0 16:15 ?        00:00:00 /usr/libexec/ib
+tan         2519    2362  0 16:15 ?        00:00:05 /usr/libexec/ib
+tan         2523    1973  0 16:15 ?        00:00:00 /usr/libexec/ib
+tan         2545    1973  0 16:15 ?        00:00:00 /usr/libexec/go
+tan         2561    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2574    1973  0 16:15 ?        00:00:00 /usr/libexec/go
+tan         2583    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2587    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2599    1973  0 16:15 ?        00:00:00 /usr/libexec/ev
+tan         2604    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2613    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2620    2225  0 16:15 ?        00:00:00 /usr/bin/Xwayla
+tan         2625    1973  0 16:15 ?        00:00:00 /usr/libexec/ev
+tan         2652    2362  0 16:15 ?        00:00:06 /usr/libexec/ib
+tan         2673    1973  0 16:15 ?        00:00:00 /usr/libexec/dc
+tan         2682    2169  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2706    1973  0 16:15 ?        00:00:00 /usr/libexec/xd
+tan         2756    1973  0 16:15 ?        00:00:01 /usr/libexec/tr
+tan         2758    1973  0 16:15 ?        00:00:00 /usr/libexec/xd
+tan         2796    1973  0 16:15 ?        00:00:00 /usr/bin/gjs -m
+tan         2815    1973  0 16:15 ?        00:00:00 /usr/libexec/gs
+tan         2830    1973  0 16:15 ?        00:00:00 /usr/libexec/gv
+tan         2843    1973  0 16:15 ?        00:00:00 /usr/libexec/ib
+tan         2851    1973  0 16:15 ?        00:00:00 /usr/bin/VBoxCl
+tan         2853    2225  0 16:15 ?        00:00:00 /usr/libexec/mu
+tan         2854    2851  0 16:15 ?        00:00:00 /usr/bin/VBoxCl
+tan         2877    1973  0 16:15 ?        00:00:00 /usr/bin/VBoxCl
+tan         2878    2877  0 16:15 ?        00:00:01 /usr/bin/VBoxCl
+tan         2896    1973  0 16:15 ?        00:00:00 /usr/libexec/xd
+tan         2909    1973  0 16:15 ?        00:00:00 /snap/snapd-des
+tan         2982    2909  0 16:15 ?        00:00:00 /snap/snapd-des
+tan         3004    2225  3 16:15 ?        00:05:51 /snap/firefox/5
+tan         3177    3004  0 16:15 ?        00:00:00 /snap/firefox/5
+tan         3191    3004  0 16:15 ?        00:00:06 /snap/firefox/5
+tan         3197    3004  0 16:15 ?        00:00:02 /snap/firefox/5
+tan         3245    1973  0 16:15 ?        00:00:00 /usr/bin/snap u
+tan         3544    3004  0 16:15 ?        00:00:01 /snap/firefox/5
+tan         3746    3004  0 16:15 ?        00:00:01 /snap/firefox/5
+tan         3754    3004  0 16:15 ?        00:00:26 /snap/firefox/5
+tan         3999    2181  0 16:16 ?        00:00:00 /usr/bin/update
+tan         4648    3004  0 16:20 ?        00:01:00 /snap/firefox/5
+tan         4754    3004  0 16:20 ?        00:01:08 /snap/firefox/5
+tan         5350    1998  0 16:37 ?        00:00:00 /usr/bin/ssh-ag
+tan         5839    3004  0 16:54 ?        00:00:46 /snap/firefox/5
+tan         8093    1973  0 17:22 ?        00:00:38 /usr/bin/nautil
+tan         8132    2169  0 17:22 ?        00:00:00 /usr/libexec/gv
+tan         8351    3004  0 17:29 ?        00:00:14 /snap/firefox/5
+tan         8638    1973  0 17:36 ?        00:00:00 /usr/bin/python
+tan         8641    8638  0 17:36 ?        00:00:00 /usr/bin/gnome-
+tan         8647    1973  0 17:36 ?        00:00:49 /usr/libexec/gn
+tan         8654    8647  0 17:36 pts/0    00:00:00 bash
+tan         8992    3004  0 17:46 ?        00:00:00 /snap/firefox/5
+tan         9070    3004  0 17:47 ?        00:00:00 /snap/firefox/5
+tan         9253    3004  0 17:54 ?        00:00:00 /snap/firefox/5
+tan        10392    2225  0 18:48 ?        00:00:00 gjs /usr/share/
+tan        10897    1973  0 19:01 ?        00:00:00 /usr/bin/python
+tan        10900   10897  0 19:01 ?        00:00:00 /usr/bin/gnome-
+tan        10906    8647  0 19:01 pts/1    00:00:00 bash
+tan        11038   10906  0 19:10 pts/1    00:00:00 script ps-log.t
+tan        11039   11038  0 19:10 pts/2    00:00:00 bash -i
+tan        11048   11039  0 19:10 pts/2    00:00:00 ps -f -u tan
+[?2004h]0;tan@ububa: ~/temp[01;32mtan@ububa[00m:[01;34m~/temp[00m$ top &
+[?2004l[1] 11049
+[?2004h]0;tan@ububa: ~/temp[01;32mtan@ububa[00m:[01;34m~/temp[00m$ [?1l>jobs -l
+[?2004l[1]+ 11049 Stopped (signal)        top
+[?2004h]0;tan@ububa: ~/temp[01;32mtan@ububa[00m:[01;34m~/temp[00m$ kill -9 11049
+[?2004l[?2004h]0;tan@ububa: ~/temp[01;32mtan@ububa[00m:[01;34m~/temp[00m$ jobs -l
+[?2004l[1]+ 11049 Killed                  top
+[?2004h]0;tan@ububa: ~/temp[01;32mtan@ububa[00m:[01;34m~/temp[00m$ jobs -l
+[?2004l[?2004h]0;tan@ububa: ~/temp[01;32mtan@ububa[00m:[01;34m~/temp[00m$ exit
+[?2004lexit
+
+Script done on 2025-04-20 19:11:03+02:00 [COMMAND_EXIT_CODE="0"]
