@@ -1,0 +1,544 @@
+Script started on 2025-05-01 12:01:51+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="179" LINES="44"]
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m lxc exec aboba-web -- bash 
+[?2004l[?2004h]0;root@aboba-web: ~root@aboba-web:~# apt update
+[?2004l[33m0% [Working][0m            Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+[33m0% [Waiting for headers] [1 InRelease 855 B/126 kB 1%][0m                                                      Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+[33m                                                      0% [1 InRelease 9996 B/126 kB 8%][0m                                 Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+[33m0% [3 InRelease 2059 B/126 kB 2%] [1 InRelease 38.3 kB/126 kB 30%][0m[33m0% [3 InRelease 3788 B/126 kB 3%] [1 InRelease 38.3 kB/126 kB 30%][0m[33m                                                                  0% [3 InRelease 48.6 kB/126 kB 39%][0m[33m                                   0% [3 InRelease 100 kB/126 kB 79%][0m[33m                                  0% [Waiting for headers][0m                        Get:4 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [782 kB]
+[33m0% [Waiting for headers] [4 Packages 3625 B/782 kB 0%][0m[33m0% [Waiting for headers] [4 Packages 69.3 kB/782 kB 9%][0m                                                       Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+[33m0% [5 InRelease 3556 B/126 kB 3%] [4 Packages 83.5 kB/782 kB 11%][0m[33m                                                                 0% [4 Packages 156 kB/782 kB 20%][0m[33m14% [Waiting for headers] [4 Packages 318 kB/782 kB 41%][0m                                                        Get:6 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [15.0 MB]
+[33m14% [6 Packages 0 B/15.0 MB 0%] [4 Packages 354 kB/782 kB 45%][0m[33m                                                              16% [6 Packages 324 kB/15.0 MB 2%][0m[33m16% [4 Packages store 0 B] [6 Packages 324 kB/15.0 MB 2%][0m[33m                                                         16% [6 Packages 527 kB/15.0 MB 4%] [Waiting for headers][0m                                                        Get:7 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [147 kB]
+[33m17% [6 Packages 643 kB/15.0 MB 4%] [7 Translation-en 4913 B/147 kB 3%][0m[33m                                                                      17% [6 Packages 707 kB/15.0 MB 5%] [Waiting for headers][0m                                                        Get:8 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [21.6 kB]
+[33m17% [6 Packages 707 kB/15.0 MB 5%] [8 Components-amd64 12.3 kB/21.6 kB 57%][0m[33m17% [7 Translation-en store 0 B] [6 Packages 707 kB/15.0 MB 5%] [8 Components-amd64 12.3 kB/21.6 kB 57%][0m[33m                                                                                                        17% [7 Translation-en store 0 B] [6 Packages 707 kB/15.0 MB 5%] [Waiting for headers][0m                                                                                     Get:9 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [833 kB]
+[33m17% [7 Translation-en store 0 B] [6 Packages 707 kB/15.0 MB 5%] [9 Packages 16.2 kB/833 kB 2%][0m[33m                                                                                              18% [6 Packages 736 kB/15.0 MB 5%] [9 Packages 96.5 kB/833 kB 12%][0m[33m18% [8 Components-amd64 store 0 B] [6 Packages 736 kB/15.0 MB 5%] [9 Packages 96.5 kB/833 kB 12%][0m[33m                                                                                                 18% [6 Packages 736 kB/15.0 MB 5%] [9 Packages 96.5 kB/833 kB 12%][0m[33m                                                                  22% [6 Packages 1375 kB/15.0 MB 9%] [Waiting for headers][0m                                                         Get:10 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [181 kB]
+[33m22% [6 Packages 1375 kB/15.0 MB 9%] [10 Translation-en 374 B/181 kB 0%][0m[33m22% [9 Packages store 0 B] [6 Packages 1375 kB/15.0 MB 9%] [10 Translation-en 374 B/181 kB 0%][0m[33m                                                                                              22% [9 Packages store 0 B] [6 Packages 1548 kB/15.0 MB 10%] [Waiting for headers][0m                                                                                 Get:11 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [52.3 kB]
+[33m22% [9 Packages store 0 B] [6 Packages 1548 kB/15.0 MB 10%] [11 Components-amd64 2245 B/52.3 kB 4%][0m[33m                                                                                                   23% [6 Packages 1548 kB/15.0 MB 10%] [11 Components-amd64 10.4 kB/52.3 kB 20%][0m[33m23% [10 Translation-en store 0 B] [6 Packages 1548 kB/15.0 MB 10%] [11 Components-amd64 10.4 kB/52.3 kB 20%][0m[33m                                                                                                            23% [6 Packages 1633 kB/15.0 MB 11%] [11 Components-amd64 35.0 kB/52.3 kB 67%][0m[33m                                                                              23% [6 Packages 1713 kB/15.0 MB 11%] [Waiting for headers][0m                                                          Get:12 http://security.ubuntu.com/ubuntu noble-security/universe amd64 c-n-f Metadata [17.0 kB]
+[33m23% [6 Packages 1713 kB/15.0 MB 11%] [12 Commands-amd64 4096 B/17.0 kB 24%][0m[33m23% [11 Components-amd64 store 0 B] [6 Packages 1713 kB/15.0 MB 11%] [12 Commands-amd64 6731 B/17.0 kB 40%][0m[33m                                                                                                           23% [11 Components-amd64 store 0 B] [6 Packages 1713 kB/15.0 MB 11%] [Waiting for headers][0m                                                                                          Get:13 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [191 kB]
+[33m23% [11 Components-amd64 store 0 B] [6 Packages 1713 kB/15.0 MB 11%] [13 Translation-en 8780 B/191 kB 5%][0m[33m                                                                                                         24% [6 Packages 1721 kB/15.0 MB 11%] [13 Translation-en 8780 B/191 kB 5%][0m[33m24% [12 Commands-amd64 store 0 B] [6 Packages 1721 kB/15.0 MB 11%] [13 Translation-en 8780 B/191 kB 5%][0m[33m                                                                                                       24% [6 Packages 1721 kB/15.0 MB 11%] [13 Translation-en 16.5 kB/191 kB 9%][0m[33m                                                                          24% [6 Packages 1780 kB/15.0 MB 12%] [Waiting for headers][0m                                                          Get:14 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+                                                          Get:15 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [17.6 kB]
+[33m24% [6 Packages 1780 kB/15.0 MB 12%] [15 Packages 15.4 kB/17.6 kB 88%][0m[33m24% [13 Translation-en store 0 B] [6 Packages 1780 kB/15.0 MB 12%] [15 Packages 15.4 kB/17.6 kB 88%][0m[33m                                                                                                    24% [13 Translation-en store 0 B] [6 Packages 1788 kB/15.0 MB 12%] [Waiting for headers][0m                                                                                        Get:16 http://security.ubuntu.com/ubuntu noble-security/multiverse Translation-en [3792 B]
+[33m24% [13 Translation-en store 0 B] [6 Packages 1788 kB/15.0 MB 12%] [16 Translation-en 3792 B/3792 B 100%][0m[33m                                                                                                         24% [13 Translation-en store 0 B] [6 Packages 1788 kB/15.0 MB 12%][0m                                                                  Get:17 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [208 B]
+[33m24% [13 Translation-en store 0 B] [6 Packages 1788 kB/15.0 MB 12%] [Waiting for headers][0m                                                                                        Get:18 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 c-n-f Metadata [380 B]
+[33m                                                                                        24% [13 Translation-en store 0 B] [6 Packages 1788 kB/15.0 MB 12%][0m[33m                                                                  25% [6 Packages 1976 kB/15.0 MB 13%][0m[33m25% [14 Components-amd64 store 0 B] [6 Packages 1984 kB/15.0 MB 13%][0m[33m                                                                    25% [6 Packages 1984 kB/15.0 MB 13%][0m[33m25% [15 Packages store 0 B] [6 Packages 1984 kB/15.0 MB 13%][0m[33m                                                            25% [6 Packages 2001 kB/15.0 MB 13%][0m[33m25% [16 Translation-en store 0 B] [6 Packages 2001 kB/15.0 MB 13%][0m[33m                                                                  26% [6 Packages 2001 kB/15.0 MB 13%][0m[33m26% [17 Components-amd64 store 0 B] [6 Packages 2001 kB/15.0 MB 13%][0m[33m                                                                    26% [6 Packages 2001 kB/15.0 MB 13%][0m[33m26% [18 Commands-amd64 store 0 B] [6 Packages 2001 kB/15.0 MB 13%][0m[33m                                                                  26% [6 Packages 2001 kB/15.0 MB 13%][0m[33m30% [6 Packages 3590 kB/15.0 MB 24%][0m[33m34% [6 Packages 5196 kB/15.0 MB 35%][0m[33m40% [6 Packages 7432 kB/15.0 MB 49%][0m[33m45% [6 Packages 9554 kB/15.0 MB 64%][0m[33m49% [6 Packages 11.2 MB/15.0 MB 75%][0m[33m55% [6 Packages 13.4 MB/15.0 MB 89%][0m[33m                                    59% [Working][0m             Get:19 http://archive.ubuntu.com/ubuntu noble/universe Translation-en [5982 kB]
+[33m59% [19 Translation-en 4217 B/5982 kB 0%][0m[33m59% [6 Packages store 0 B] [19 Translation-en 4217 B/5982 kB 0%][0m[33m63% [6 Packages store 0 B] [19 Translation-en 1667 kB/5982 kB 28%][0m[33m68% [6 Packages store 0 B] [19 Translation-en 3438 kB/5982 kB 57%]                                                                                                    3457 kB/s 3s[0m[33m68% [19 Translation-en 3617 kB/5982 kB 60%]                                                                                                                           3457 kB/s 3s[0m[33m71% [19 Translation-en 4674 kB/5982 kB 78%]                                                                                                                           3457 kB/s 2s[0m[33m72% [19 Translation-en 5157 kB/5982 kB 86%]                                                                                                                           3457 kB/s 2s[0m[33m74% [Waiting for headers]                                                                                                                                             3457 kB/s 2s[0m                                                                                                                                                                                  Get:20 http://archive.ubuntu.com/ubuntu noble/universe amd64 Components [3871 kB]
+[33m74% [20 Components-amd64 19.0 kB/3871 kB 0%]                                                                                                                          3457 kB/s 2s[0m[33m74% [19 Translation-en store 0 B] [20 Components-amd64 19.0 kB/3871 kB 0%]                                                                                            3457 kB/s 2s[0m[33m76% [20 Components-amd64 584 kB/3871 kB 15%]                                                                                                                          3457 kB/s 2s[0m[33m78% [20 Components-amd64 1403 kB/3871 kB 36%]                                                                                                                         3457 kB/s 1s[0m[33m82% [20 Components-amd64 3157 kB/3871 kB 82%]                                                                                                                         3457 kB/s 1s[0m[33m84% [20 Components-amd64 3871 kB/3871 kB 100%]                                                                                                                        3457 kB/s 1s[0m[33m84% [Working]                                                                                                                                                         3457 kB/s 1s[0m[33m84% [20 Components-amd64 store 0 B] [Waiting for headers]                                                                                                             3457 kB/s 1s[0m                                                                                                                                                                                  Get:21 http://archive.ubuntu.com/ubuntu noble/universe amd64 c-n-f Metadata [301 kB]
+[33m84% [20 Components-amd64 store 0 B] [21 Commands-amd64 1885 B/301 kB 1%]                                                                                              3457 kB/s 1s[0m[33m85% [20 Components-amd64 store 0 B] [Waiting for headers]                                                                                                             3457 kB/s 1s[0m                                                                                                                                                                                  Get:22 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [269 kB]
+[33m85% [20 Components-amd64 store 0 B] [22 Packages 7254 B/269 kB 3%]                                                                                                    3457 kB/s 1s[0m[33m85% [20 Components-amd64 store 0 B] [Waiting for headers]                                                                                                             3457 kB/s 1s[0m                                                                                                                                                                                  Get:23 http://archive.ubuntu.com/ubuntu noble/multiverse Translation-en [118 kB]
+[33m85% [20 Components-amd64 store 0 B] [23 Translation-en 1355 B/118 kB 1%]                                                                                              3457 kB/s 1s[0m[33m86% [20 Components-amd64 store 0 B] [Waiting for headers]                                                                                                             3457 kB/s 1s[0m                                                                                                                                                                                  Get:24 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Components [35.0 kB]
+[33m86% [20 Components-amd64 store 0 B] [24 Components-amd64 4106 B/35.0 kB 12%]                                                                                          3457 kB/s 1s[0m[33m86% [20 Components-amd64 store 0 B] [Waiting for headers]                                                                                                             3457 kB/s 1s[0m                                                                                                                                                                                  Get:25 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 c-n-f Metadata [8328 B]
+[33m86% [20 Components-amd64 store 0 B] [25 Commands-amd64 1626 B/8328 B 20%]                                                                                             3457 kB/s 1s[0m[33m86% [20 Components-amd64 store 0 B]                                                                                                                                   3457 kB/s 1s[0m                                                                                                                                                                                  Get:26 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1028 kB]
+[33m86% [20 Components-amd64 store 0 B] [26 Packages 1250 B/1028 kB 0%]                                                                                                   3457 kB/s 1s[0m                                                                                                                                                                                  Ign:26 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+[33m86% [20 Components-amd64 store 0 B]                                                                                                                                   3457 kB/s 1s[0m[33m86% [Waiting for headers]                                                                                                                                             3457 kB/s 1s[0m[33m86% [21 Commands-amd64 store 0 B] [Waiting for headers]                                                                                                               3457 kB/s 1s[0m[33m86% [Waiting for headers]                                                                                                                                             3457 kB/s 1s[0m[33m86% [22 Packages store 0 B] [Waiting for headers]                                                                                                                     3457 kB/s 1s[0m[33m86% [Waiting for headers]                                                                                                                                             3457 kB/s 1s[0m[33m86% [23 Translation-en store 0 B] [Waiting for headers]                                                                                                               3457 kB/s 1s[0m[33m87% [Waiting for headers]                                                                                                                                             3457 kB/s 1s[0m[33m87% [24 Components-amd64 store 0 B] [Waiting for headers]                                                                                                             3457 kB/s 1s[0m[33m87% [Waiting for headers]                                                                                                                                             3457 kB/s 1s[0m[33m87% [25 Commands-amd64 store 0 B] [Waiting for headers]                                                                                                               3457 kB/s 1s[0m[33m87% [Waiting for headers]                                                                                                                                             3457 kB/s 1s[0m                                                                                                                                                                                  Get:27 http://archive.ubuntu.com/ubuntu noble-updates/main Translation-en [224 kB]
+[33m87% [27 Translation-en 3625 B/224 kB 2%]                                                                                                                              3457 kB/s 1s[0m[33m87% [Waiting for headers]                                                                                                                                             3457 kB/s 0s[0m                                                                                                                                                                                  Get:28 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [161 kB]
+[33m87% [28 Components-amd64 8858 B/161 kB 5%]                                                                                                                            3457 kB/s 0s[0m[33m87% [27 Translation-en store 0 B] [28 Components-amd64 8858 B/161 kB 5%]                                                                                              3457 kB/s 0s[0m[33m88% [27 Translation-en store 0 B] [Waiting for headers]                                                                                                               3457 kB/s 0s[0m                                                                                                                                                                                  Get:29 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1059 kB]
+[33m88% [27 Translation-en store 0 B] [29 Packages 1179 B/1059 kB 0%]                                                                                                     3457 kB/s 0s[0m[33m88% [29 Packages 38.4 kB/1059 kB 4%]                                                                                                                                  3457 kB/s 0s[0m[33m88% [28 Components-amd64 store 0 B] [29 Packages 38.4 kB/1059 kB 4%]                                                                                                  3457 kB/s 0s[0m[33m88% [29 Packages 38.4 kB/1059 kB 4%]                                                                                                                                  3457 kB/s 0s[0m[33m91% [Waiting for headers]                                                                                                                                             3457 kB/s 0s[0m                                                                                                                                                                                  Get:30 http://archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [268 kB]
+[33m91% [30 Translation-en 20.3 kB/268 kB 8%]                                                                                                                             3457 kB/s 0s[0m[33m91% [29 Packages store 0 B] [30 Translation-en 25.4 kB/268 kB 10%]                                                                                                    3457 kB/s 0s[0m[33m92% [29 Packages store 0 B] [Waiting for headers]                                                                                                                     3457 kB/s 0s[0m                                                                                                                                                                                  Get:31 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [376 kB]
+[33m92% [29 Packages store 0 B] [31 Components-amd64 12.3 kB/376 kB 3%]                                                                                                   3457 kB/s 0s[0m[33m93% [29 Packages store 6352 kB] [Waiting for headers]                                                                                                                 3457 kB/s 0s[0m                                                                                                                                                                                  Get:32 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 c-n-f Metadata [26.0 kB]
+[33m93% [32 Commands-amd64 26.0 kB/26.0 kB 100%]                                                                                                                          3457 kB/s 0s[0m[33m93% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m93% [30 Translation-en store 0 B]                                                                                                                                     3457 kB/s 0s[0m                                                                                                                                                                                  Get:33 http://archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [199 kB]
+[33m93% [30 Translation-en store 0 B] [33 Translation-en 900 B/199 kB 0%]                                                                                                 3457 kB/s 0s[0m[33m93% [33 Translation-en 182 kB/199 kB 92%]                                                                                                                             3457 kB/s 0s[0m[33m93% [31 Components-amd64 store 0 B] [33 Translation-en 182 kB/199 kB 92%]                                                                                             3457 kB/s 0s[0m[33m93% [31 Components-amd64 store 0 B]                                                                                                                                   3457 kB/s 0s[0m                                                                                                                                                                                  Get:34 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+[33m93% [31 Components-amd64 store 0 B]                                                                                                                                   3457 kB/s 0s[0m                                                                                                                                                                                  Get:35 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [21.5 kB]
+[33m93% [31 Components-amd64 store 0 B] [35 Packages 10.4 kB/21.5 kB 48%]                                                                                                 3457 kB/s 0s[0m[33m93% [31 Components-amd64 store 0 B] [Waiting for headers]                                                                                                             3457 kB/s 0s[0m                                                                                                                                                                                  Get:36 http://archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [4788 B]
+[33m93% [31 Components-amd64 store 0 B] [36 Translation-en 4788 B/4788 B 100%]                                                                                            3457 kB/s 0s[0m[33m93% [31 Components-amd64 store 0 B]                                                                                                                                   3457 kB/s 0s[0m                                                                                                                                                                                  Get:37 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+[33m93% [31 Components-amd64 store 0 B] [37 Components-amd64 940 B/940 B 100%]                                                                                            3457 kB/s 0s[0m                                                                                                                                                                                  Get:38 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 c-n-f Metadata [592 B]
+[33m93% [31 Components-amd64 store 0 B] [38 Commands-amd64 592 B/592 B 100%]                                                                                              3457 kB/s 0s[0m[33m93% [31 Components-amd64 store 0 B] [Waiting for headers]                                                                                                             3457 kB/s 0s[0m                                                                                                                                                                                  Get:39 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [39.1 kB]
+[33m93% [31 Components-amd64 store 0 B] [39 Packages 1183 B/39.1 kB 3%]                                                                                                   3457 kB/s 0s[0m[33m94% [31 Components-amd64 store 0 B] [Waiting for headers]                                                                                                             3457 kB/s 0s[0m                                                                                                                                                                                  Get:40 http://archive.ubuntu.com/ubuntu noble-backports/main Translation-en [8676 B]
+[33m94% [31 Components-amd64 store 0 B] [40 Translation-en 5048 B/8676 B 58%]                                                                                             3457 kB/s 0s[0m[33m94% [31 Components-amd64 store 0 B]                                                                                                                                   3457 kB/s 0s[0m[33m94% [Waiting for headers]                                                                                                                                             3457 kB/s 0s[0m                                                                                                                                                                                  Get:41 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7072 B]
+[33m94% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m94% [32 Commands-amd64 store 0 B] [Waiting for headers]                                                                                                               3457 kB/s 0s[0m                                                                                                                                                                                  Get:42 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 c-n-f Metadata [272 B]
+[33m94% [32 Commands-amd64 store 0 B] [42 Commands-amd64 272 B/272 B 100%]                                                                                                3457 kB/s 0s[0m[33m94% [32 Commands-amd64 store 0 B] [Waiting for headers]                                                                                                               3457 kB/s 0s[0m[33m94% [Waiting for headers]                                                                                                                                             3457 kB/s 0s[0m[33m94% [33 Translation-en store 0 B] [Waiting for headers]                                                                                                               3457 kB/s 0s[0m                                                                                                                                                                                  Get:43 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [27.1 kB]
+[33m94% [33 Translation-en store 0 B] [43 Packages 6863 B/27.1 kB 25%]                                                                                                    3457 kB/s 0s[0m[33m94% [33 Translation-en store 0 B] [Waiting for headers]                                                                                                               3457 kB/s 0s[0m                                                                                                                                                                                  Get:44 http://archive.ubuntu.com/ubuntu noble-backports/universe Translation-en [16.5 kB]
+[33m94% [33 Translation-en store 0 B] [44 Translation-en 10.1 kB/16.5 kB 61%]                                                                                             3457 kB/s 0s[0m[33m94% [33 Translation-en store 0 B] [Waiting for headers]                                                                                                               3457 kB/s 0s[0m                                                                                                                                                                                  Get:45 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [16.4 kB]
+[33m94% [33 Translation-en store 0 B] [45 Components-amd64 4915 B/16.4 kB 30%]                                                                                            3457 kB/s 0s[0m[33m94% [33 Translation-en store 0 B] [Waiting for headers]                                                                                                               3457 kB/s 0s[0m                                                                                                                                                                                  Get:46 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 c-n-f Metadata [1304 B]
+[33m94% [33 Translation-en store 0 B] [46 Commands-amd64 1304 B/1304 B 100%]                                                                                              3457 kB/s 0s[0m[33m94% [33 Translation-en store 0 B] [Waiting for headers]                                                                                                               3457 kB/s 0s[0m                                                                                                                                                                                  Get:47 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+[33m94% [33 Translation-en store 0 B] [47 Components-amd64 216 B/216 B 100%]                                                                                              3457 kB/s 0s[0m[33m94% [33 Translation-en store 0 B]                                                                                                                                     3457 kB/s 0s[0m                                                                                                                                                                                  Get:48 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 c-n-f Metadata [116 B]
+[33m94% [33 Translation-en store 0 B] [48 Commands-amd64 116 B/116 B 100%]                                                                                                3457 kB/s 0s[0m                                                                                                                                                                                  Get:49 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+[33m94% [33 Translation-en store 0 B] [49 Components-amd64 212 B/212 B 100%]                                                                                              3457 kB/s 0s[0m                                                                                                                                                                                  Get:50 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 c-n-f Metadata [116 B]
+[33m94% [33 Translation-en store 0 B]                                                                                                                                     3457 kB/s 0s[0m[33m94% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m94% [34 Components-amd64 store 0 B]                                                                                                                                   3457 kB/s 0s[0m[33m94% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m94% [35 Packages store 0 B]                                                                                                                                           3457 kB/s 0s[0m[33m95% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m95% [36 Translation-en store 0 B]                                                                                                                                     3457 kB/s 0s[0m[33m95% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m95% [37 Components-amd64 store 0 B]                                                                                                                                   3457 kB/s 0s[0m[33m95% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m95% [38 Commands-amd64 store 0 B]                                                                                                                                     3457 kB/s 0s[0m[33m95% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m95% [39 Packages store 0 B]                                                                                                                                           3457 kB/s 0s[0m[33m95% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m95% [40 Translation-en store 0 B]                                                                                                                                     3457 kB/s 0s[0m[33m96% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m96% [41 Components-amd64 store 0 B]                                                                                                                                   3457 kB/s 0s[0m[33m96% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m96% [42 Commands-amd64 store 0 B]                                                                                                                                     3457 kB/s 0s[0m[33m96% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m96% [43 Packages store 0 B]                                                                                                                                           3457 kB/s 0s[0m[33m96% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m96% [44 Translation-en store 0 B]                                                                                                                                     3457 kB/s 0s[0m[33m96% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m96% [45 Components-amd64 store 0 B]                                                                                                                                   3457 kB/s 0s[0m[33m96% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m96% [46 Commands-amd64 store 0 B]                                                                                                                                     3457 kB/s 0s[0m[33m97% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m97% [47 Components-amd64 store 0 B]                                                                                                                                   3457 kB/s 0s[0m[33m97% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m97% [48 Commands-amd64 store 0 B]                                                                                                                                     3457 kB/s 0s[0m[33m97% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m97% [49 Components-amd64 store 0 B]                                                                                                                                   3457 kB/s 0s[0m[33m97% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m97% [50 Commands-amd64 store 0 B]                                                                                                                                     3457 kB/s 0s[0m[33m97% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m97% [Working]                                                                                                                                                         3457 kB/s 0s[0m[33m97% [Working]                                                                                                                                                         3457 kB/s 0s[0m                                                                                                                                                                                  Get:26 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1028 kB]
+[33m98% [26 Packages 340 kB/1028 kB 33%]                                                                                                                                  3457 kB/s 0s[0m[33m100% [Working]                                                                                                                                                        3457 kB/s 0s[0m[33m100% [26 Packages store 0 B]                                                                                                                                          3457 kB/s 0s[0m[33m100% [Working]                                                                                                                                                        3457 kB/s 0s[0m                                                                                                                                                                                  Fetched 31.4 MB in 11s (2786 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 5%Reading package lists... 5%Reading package lists... 48%Reading package lists... 48%Reading package lists... 67%Reading package lists... 67%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 69%Reading package lists... 69%Reading package lists... 72%Reading package lists... 72%Reading package lists... 74%Reading package lists... 74%Reading package lists... 78%Reading package lists... 78%Reading package lists... 79%Reading package lists... 79%Reading package lists... 83%Reading package lists... 83%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 88%Reading package lists... 88%Reading package lists... 90%Reading package lists... 90%Reading package lists... 93%Reading package lists... 93%Reading package lists... 94%Reading package lists... 94%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+9 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[?2004h]0;root@aboba-web: ~root@aboba-web:~# apt install apache2
+[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils libapr1t64 libaprutil1-dbd-sqlite3 libaprutil1-ldap libaprutil1t64 liblua5.4-0 ssl-cert
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils libapr1t64 libaprutil1-dbd-sqlite3 libaprutil1-ldap libaprutil1t64 liblua5.4-0 ssl-cert
+0 upgraded, 10 newly installed, 0 to remove and 9 not upgraded.
+Need to get 2084 kB of archives.
+After this operation, 8094 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+[33m0% [Working][0m            Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libapr1t64 amd64 1.7.2-3.1ubuntu0.1 [108 kB]
+[33m0% [1 libapr1t64 3243 B/108 kB 3%][0m[33m                                  6% [Working][0m            Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1t64 amd64 1.6.3-1.1ubuntu7 [91.9 kB]
+[33m6% [2 libaprutil1t64 1129 B/91.9 kB 1%][0m[33m                                       12% [Waiting for headers][0m                         Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.3-1.1ubuntu7 [11.2 kB]
+[33m12% [3 libaprutil1-dbd-sqlite3 5397 B/11.2 kB 48%][0m[33m                                                  14% [Waiting for headers][0m                         Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1-ldap amd64 1.6.3-1.1ubuntu7 [9116 B]
+[33m14% [4 libaprutil1-ldap 4166 B/9116 B 46%][0m[33m                                          16% [Working][0m             Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 liblua5.4-0 amd64 5.4.6-3build2 [166 kB]
+[33m16% [5 liblua5.4-0 1330 B/166 kB 1%][0m[33m                                    25% [Waiting for headers][0m                         Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-bin amd64 2.4.58-1ubuntu8.6 [1330 kB]
+[33m25% [6 apache2-bin 6536 B/1330 kB 0%][0m[33m                                     78% [Waiting for headers][0m                         Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-data all 2.4.58-1ubuntu8.6 [163 kB]
+[33m79% [7 apache2-data 19.9 kB/163 kB 12%][0m[33m                                       86% [Working][0m             Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-utils amd64 2.4.58-1ubuntu8.6 [97.2 kB]
+[33m86% [8 apache2-utils 4096 B/97.2 kB 4%][0m[33m                                       92% [Waiting for headers][0m                         Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2 amd64 2.4.58-1ubuntu8.6 [90.2 kB]
+[33m92% [9 apache2 629 B/90.2 kB 1%][0m[33m                                97% [Waiting for headers][0m                         Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 ssl-cert all 1.1.2ubuntu1 [17.8 kB]
+[33m97% [10 ssl-cert 4096 B/17.8 kB 23%][0m[33m                                    100% [Working][0m              Fetched 2084 kB in 1s (1443 kB/s)
+Preconfiguring packages ...
+
+7[0;43r8[1ASelecting previously unselected package libapr1t64:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 37308 files and directories currently installed.)
+Preparing to unpack .../0-libapr1t64_1.7.2-3.1ubuntu0.1_amd64.deb ...
+7[44;0f[42m[30mProgress: [  0%][49m[39m [.............................................................................................................................................................] 87[44;0f[42m[30mProgress: [  2%][49m[39m [###..........................................................................................................................................................] 8Unpacking libapr1t64:amd64 (1.7.2-3.1ubuntu0.1) ...
+7[44;0f[42m[30mProgress: [  5%][49m[39m [#######......................................................................................................................................................] 8Selecting previously unselected package libaprutil1t64:amd64.
+Preparing to unpack .../1-libaprutil1t64_1.6.3-1.1ubuntu7_amd64.deb ...
+7[44;0f[42m[30mProgress: [  7%][49m[39m [###########..................................................................................................................................................] 8Unpacking libaprutil1t64:amd64 (1.6.3-1.1ubuntu7) ...
+7[44;0f[42m[30mProgress: [ 10%][49m[39m [###############..............................................................................................................................................] 8Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../2-libaprutil1-dbd-sqlite3_1.6.3-1.1ubuntu7_amd64.deb ...
+7[44;0f[42m[30mProgress: [ 12%][49m[39m [###################..........................................................................................................................................] 8Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.3-1.1ubuntu7) ...
+7[44;0f[42m[30mProgress: [ 15%][49m[39m [######################.......................................................................................................................................] 8Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../3-libaprutil1-ldap_1.6.3-1.1ubuntu7_amd64.deb ...
+7[44;0f[42m[30mProgress: [ 17%][49m[39m [##########################...................................................................................................................................] 8Unpacking libaprutil1-ldap:amd64 (1.6.3-1.1ubuntu7) ...
+7[44;0f[42m[30mProgress: [ 20%][49m[39m [##############################...............................................................................................................................] 8Selecting previously unselected package liblua5.4-0:amd64.
+Preparing to unpack .../4-liblua5.4-0_5.4.6-3build2_amd64.deb ...
+7[44;0f[42m[30mProgress: [ 22%][49m[39m [##################################...........................................................................................................................] 8Unpacking liblua5.4-0:amd64 (5.4.6-3build2) ...
+7[44;0f[42m[30mProgress: [ 24%][49m[39m [######################################.......................................................................................................................] 8Selecting previously unselected package apache2-bin.
+Preparing to unpack .../5-apache2-bin_2.4.58-1ubuntu8.6_amd64.deb ...
+7[44;0f[42m[30mProgress: [ 27%][49m[39m [##########################################...................................................................................................................] 8Unpacking apache2-bin (2.4.58-1ubuntu8.6) ...
+7[44;0f[42m[30mProgress: [ 29%][49m[39m [#############################################................................................................................................................] 8Selecting previously unselected package apache2-data.
+Preparing to unpack .../6-apache2-data_2.4.58-1ubuntu8.6_all.deb ...
+7[44;0f[42m[30mProgress: [ 32%][49m[39m [#################################################............................................................................................................] 8Unpacking apache2-data (2.4.58-1ubuntu8.6) ...
+7[44;0f[42m[30mProgress: [ 34%][49m[39m [#####################################################........................................................................................................] 8Selecting previously unselected package apache2-utils.
+Preparing to unpack .../7-apache2-utils_2.4.58-1ubuntu8.6_amd64.deb ...
+7[44;0f[42m[30mProgress: [ 37%][49m[39m [#########################################################....................................................................................................] 8Unpacking apache2-utils (2.4.58-1ubuntu8.6) ...
+7[44;0f[42m[30mProgress: [ 39%][49m[39m [#############################################################................................................................................................] 8Selecting previously unselected package apache2.
+Preparing to unpack .../8-apache2_2.4.58-1ubuntu8.6_amd64.deb ...
+7[44;0f[42m[30mProgress: [ 41%][49m[39m [#################################################################............................................................................................] 8Unpacking apache2 (2.4.58-1ubuntu8.6) ...
+7[44;0f[42m[30mProgress: [ 44%][49m[39m [####################################################################.........................................................................................] 8Selecting previously unselected package ssl-cert.
+Preparing to unpack .../9-ssl-cert_1.1.2ubuntu1_all.deb ...
+7[44;0f[42m[30mProgress: [ 46%][49m[39m [########################################################################.....................................................................................] 8Unpacking ssl-cert (1.1.2ubuntu1) ...
+7[44;0f[42m[30mProgress: [ 49%][49m[39m [############################################################################.................................................................................] 8Setting up ssl-cert (1.1.2ubuntu1) ...
+7[44;0f[42m[30mProgress: [ 51%][49m[39m [################################################################################.............................................................................] 8Created symlink /etc/systemd/system/multi-user.target.wants/ssl-cert.service → /usr/lib/systemd/system/ssl-cert.service.
+7[44;0f[42m[30mProgress: [ 54%][49m[39m [####################################################################################.........................................................................] 8Setting up libapr1t64:amd64 (1.7.2-3.1ubuntu0.1) ...
+7[44;0f[42m[30mProgress: [ 56%][49m[39m [########################################################################################.....................................................................] 87[44;0f[42m[30mProgress: [ 59%][49m[39m [###########################################################################################..................................................................] 8Setting up liblua5.4-0:amd64 (5.4.6-3build2) ...
+7[44;0f[42m[30mProgress: [ 61%][49m[39m [###############################################################################################..............................................................] 87[44;0f[42m[30mProgress: [ 63%][49m[39m [###################################################################################################..........................................................] 8Setting up apache2-data (2.4.58-1ubuntu8.6) ...
+7[44;0f[42m[30mProgress: [ 66%][49m[39m [#######################################################################################################......................................................] 87[44;0f[42m[30mProgress: [ 68%][49m[39m [###########################################################################################################..................................................] 8Setting up libaprutil1t64:amd64 (1.6.3-1.1ubuntu7) ...
+7[44;0f[42m[30mProgress: [ 71%][49m[39m [###############################################################################################################..............................................] 87[44;0f[42m[30mProgress: [ 73%][49m[39m [##################################################################################################################...........................................] 8Setting up libaprutil1-ldap:amd64 (1.6.3-1.1ubuntu7) ...
+7[44;0f[42m[30mProgress: [ 76%][49m[39m [######################################################################################################################.......................................] 87[44;0f[42m[30mProgress: [ 78%][49m[39m [##########################################################################################################################...................................] 8Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.3-1.1ubuntu7) ...
+7[44;0f[42m[30mProgress: [ 80%][49m[39m [##############################################################################################################################...............................] 87[44;0f[42m[30mProgress: [ 83%][49m[39m [##################################################################################################################################...........................] 8Setting up apache2-utils (2.4.58-1ubuntu8.6) ...
+7[44;0f[42m[30mProgress: [ 85%][49m[39m [######################################################################################################################################.......................] 87[44;0f[42m[30mProgress: [ 88%][49m[39m [#########################################################################################################################################....................] 8Setting up apache2-bin (2.4.58-1ubuntu8.6) ...
+7[44;0f[42m[30mProgress: [ 90%][49m[39m [#############################################################################################################################################................] 87[44;0f[42m[30mProgress: [ 93%][49m[39m [#################################################################################################################################################............] 8Setting up apache2 (2.4.58-1ubuntu8.6) ...
+7[44;0f[42m[30mProgress: [ 95%][49m[39m [#####################################################################################################################################################........] 8Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /usr/lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /usr/lib/systemd/system/apache-htcacheclean.service.
+7[44;0f[42m[30mProgress: [ 98%][49m[39m [#########################################################################################################################################################....] 8Processing triggers for ufw (0.36.2-6) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+
+7[0;44r8[1A[JScanning processes... [                                                                                                                                                           ]Scanning processes... [======                                                                                                                                                     ]Scanning processes... [=============                                                                                                                                              ]Scanning processes... [====================                                                                                                                                       ]Scanning processes... [==========================                                                                                                                                 ]Scanning processes... [=================================                                                                                                                          ]Scanning processes... [========================================                                                                                                                   ]Scanning processes... [===============================================                                                                                                            ]Scanning processes... [=====================================================                                                                                                      ]Scanning processes... [============================================================                                                                                               ]Scanning processes... [===================================================================                                                                                        ]Scanning processes... [==========================================================================                                                                                 ]Scanning processes... [================================================================================                                                                           ]Scanning processes... [=======================================================================================                                                                    ]Scanning processes... [==============================================================================================                                                             ]Scanning processes... [=====================================================================================================                                                      ]Scanning processes... [===========================================================================================================                                                ]Scanning processes... [==================================================================================================================                                         ]Scanning processes... [=========================================================================================================================                                  ]Scanning processes... [================================================================================================================================                           ]Scanning processes... [======================================================================================================================================                     ]Scanning processes... [=============================================================================================================================================              ]Scanning processes... [====================================================================================================================================================       ]Scanning processes... [===========================================================================================================================================================]Scanning processes...                                                                                                                                                              
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+[?2004h]0;root@aboba-web: ~root@aboba-web:~# systemctl enable[K[K[K[K[K[K[K[K[Ktl enable --now apache2
+[?2004lSynchronizing state of apache2.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable apache2
+[?2004h]0;root@aboba-web: ~root@aboba-web:~# exit
+[?2004lexit
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m lxc exec aboba-web -- bash [K[K[K[K[Khttps[K://localhost
+[?2004lError: Command not found
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m lxc exec aboba-web -- http://localhostchttp://localhostuhttp://localhostrhttp://localhostlhttp://localhost http://localhost
+[?2004l<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <!--
+    Modified from the Debian original for Ubuntu
+    Last updated: 2022-03-22
+    See: https://launchpad.net/bugs/1966004
+  -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Apache2 Ubuntu Default Page: It works</title>
+    <style type="text/css" media="screen">
+  * {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  body, html {
+    padding: 3px 3px 3px 3px;
+
+    background-color: #D8DBE2;
+
+    font-family: Ubuntu, Verdana, sans-serif;
+    font-size: 11pt;
+    text-align: center;
+  }
+
+  div.main_page {
+    position: relative;
+    display: table;
+
+    width: 800px;
+
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 0px 0px 0px;
+
+    border-width: 2px;
+    border-color: #212738;
+    border-style: solid;
+
+    background-color: #FFFFFF;
+
+    text-align: center;
+  }
+
+  div.page_header {
+    height: 180px;
+    width: 100%;
+
+    background-color: #F5F6F7;
+  }
+
+  div.page_header span {
+    margin: 15px 0px 0px 50px;
+
+    font-size: 180%;
+    font-weight: bold;
+  }
+
+  div.page_header img {
+    margin: 3px 0px 0px 40px;
+
+    border: 0px 0px 0px;
+  }
+
+  div.banner {
+    padding: 9px 6px 9px 6px;
+    background-color: #E9510E;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 112%;
+    text-align: center;
+    position: absolute;
+    left: 40%;
+    bottom: 30px;
+    width: 20%;
+  }
+
+  div.table_of_contents {
+    clear: left;
+
+    min-width: 200px;
+
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.table_of_contents_item {
+    clear: left;
+
+    width: 100%;
+
+    margin: 4px 0px 0px 0px;
+
+    background-color: #FFFFFF;
+
+    color: #000000;
+    text-align: left;
+  }
+
+  div.table_of_contents_item a {
+    margin: 6px 0px 0px 6px;
+  }
+
+  div.content_section {
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.content_section_text {
+    padding: 4px 8px 4px 8px;
+
+    color: #000000;
+    font-size: 100%;
+  }
+
+  div.content_section_text pre {
+    margin: 8px 0px 8px 0px;
+    padding: 8px 8px 8px 8px;
+
+    border-width: 1px;
+    border-style: dotted;
+    border-color: #000000;
+
+    background-color: #F5F6F7;
+
+    font-style: italic;
+  }
+
+  div.content_section_text p {
+    margin-bottom: 6px;
+  }
+
+  div.content_section_text ul, div.content_section_text li {
+    padding: 4px 8px 4px 16px;
+  }
+
+  div.section_header {
+    padding: 3px 6px 3px 6px;
+
+    background-color: #8E9CB2;
+
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 112%;
+    text-align: center;
+  }
+
+  div.section_header_grey {
+    background-color: #9F9386;
+  }
+
+  .floating_element {
+    position: relative;
+    float: left;
+  }
+
+  div.table_of_contents_item a,
+  div.content_section_text a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  div.table_of_contents_item a:link,
+  div.table_of_contents_item a:visited,
+  div.table_of_contents_item a:active {
+    color: #000000;
+  }
+
+  div.table_of_contents_item a:hover {
+    background-color: #000000;
+
+    color: #FFFFFF;
+  }
+
+  div.content_section_text a:link,
+  div.content_section_text a:visited,
+   div.content_section_text a:active {
+    background-color: #DCDFE6;
+
+    color: #000000;
+  }
+
+  div.content_section_text a:hover {
+    background-color: #000000;
+
+    color: #DCDFE6;
+  }
+
+  div.validator {
+  }
+    </style>
+  </head>
+  <body>
+    <div class="main_page">
+      <div class="page_header floating_element">
+        <img src="icons/ubuntu-logo.png" alt="Ubuntu Logo"
+             style="width:184px;height:146px;" class="floating_element" />
+        <div>
+          <span style="margin-top: 1.5em;" class="floating_element">
+            Apache2 Default Page
+          </span>
+        </div>
+        <div class="banner">
+          <div id="about"></div>
+          It works!
+        </div>
+
+      </div>
+      <div class="content_section floating_element">
+        <div class="content_section_text">
+          <p>
+                This is the default welcome page used to test the correct 
+                operation of the Apache2 server after installation on Ubuntu systems.
+                It is based on the equivalent page on Debian, from which the Ubuntu Apache
+                packaging is derived.
+                If you can read this page, it means that the Apache HTTP server installed at
+                this site is working properly. You should <b>replace this file</b> (located at
+                <tt>/var/www/html/index.html</tt>) before continuing to operate your HTTP server.
+          </p>
+
+          <p>
+                If you are a normal user of this web site and don't know what this page is
+                about, this probably means that the site is currently unavailable due to
+                maintenance.
+                If the problem persists, please contact the site's administrator.
+          </p>
+
+        </div>
+        <div class="section_header">
+          <div id="changes"></div>
+                Configuration Overview
+        </div>
+        <div class="content_section_text">
+          <p>
+                Ubuntu's Apache2 default configuration is different from the
+                upstream default configuration, and split into several files optimized for
+                interaction with Ubuntu tools. The configuration system is
+                <b>fully documented in
+                /usr/share/doc/apache2/README.Debian.gz</b>. Refer to this for the full
+                documentation. Documentation for the web server itself can be
+                found by accessing the <a href="/manual">manual</a> if the <tt>apache2-doc</tt>
+                package was installed on this server.
+          </p>
+          <p>
+                The configuration layout for an Apache2 web server installation on Ubuntu systems is as follows:
+          </p>
+          <pre>
+/etc/apache2/
+|-- apache2.conf
+|       `--  ports.conf
+|-- mods-enabled
+|       |-- *.load
+|       `-- *.conf
+|-- conf-enabled
+|       `-- *.conf
+|-- sites-enabled
+|       `-- *.conf
+          </pre>
+          <ul>
+                        <li>
+                           <tt>apache2.conf</tt> is the main configuration
+                           file. It puts the pieces together by including all remaining configuration
+                           files when starting up the web server.
+                        </li>
+
+                        <li>
+                           <tt>ports.conf</tt> is always included from the
+                           main configuration file. It is used to determine the listening ports for
+                           incoming connections, and this file can be customized anytime.
+                        </li>
+
+                        <li>
+                           Configuration files in the <tt>mods-enabled/</tt>,
+                           <tt>conf-enabled/</tt> and <tt>sites-enabled/</tt> directories contain
+                           particular configuration snippets which manage modules, global configuration
+                           fragments, or virtual host configurations, respectively.
+                        </li>
+
+                        <li>
+                           They are activated by symlinking available
+                           configuration files from their respective
+                           *-available/ counterparts. These should be managed
+                           by using our helpers
+                           <tt>
+                                a2enmod,
+                                a2dismod,
+                           </tt>
+                           <tt>
+                                a2ensite,
+                                a2dissite,
+                            </tt>
+                                and
+                           <tt>
+                                a2enconf,
+                                a2disconf
+                           </tt>. See their respective man pages for detailed information.
+                        </li>
+
+                        <li>
+                           The binary is called apache2 and is managed using systemd, so to
+                           start/stop the service use <tt>systemctl start apache2</tt> and
+                           <tt>systemctl stop apache2</tt>, and use <tt>systemctl status apache2</tt>
+                           and <tt>journalctl -u apache2</tt> to check status.  <tt>system</tt>
+                           and <tt>apache2ctl</tt> can also be used for service management if
+                           desired.
+                           <b>Calling <tt>/usr/bin/apache2</tt> directly will not work</b> with the
+                           default configuration.
+                        </li>
+          </ul>
+        </div>
+
+        <div class="section_header">
+            <div id="docroot"></div>
+                Document Roots
+        </div>
+
+        <div class="content_section_text">
+            <p>
+                By default, Ubuntu does not allow access through the web browser to
+                <em>any</em> file outside of those located in <tt>/var/www</tt>,
+                <a href="http://httpd.apache.org/docs/2.4/mod/mod_userdir.html" rel="nofollow">public_html</a>
+                directories (when enabled) and <tt>/usr/share</tt> (for web
+                applications). If your site is using a web document root
+                located elsewhere (such as in <tt>/srv</tt>) you may need to whitelist your
+                document root directory in <tt>/etc/apache2/apache2.conf</tt>.
+            </p>
+            <p>
+                The default Ubuntu document root is <tt>/var/www/html</tt>. You
+                can make your own virtual hosts under /var/www.
+            </p>
+        </div>
+
+        <div class="section_header">
+          <div id="bugs"></div>
+                Reporting Problems
+        </div>
+        <div class="content_section_text">
+          <p>
+                Please use the <tt>ubuntu-bug</tt> tool to report bugs in the
+                Apache2 package with Ubuntu. However, check <a
+                href="https://bugs.launchpad.net/ubuntu/+source/apache2"
+                rel="nofollow">existing bug reports</a> before reporting a new bug.
+          </p>
+          <p>
+                Please report bugs specific to modules (such as PHP and others)
+                to their respective packages, not to the web server itself.
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <div class="validator">
+    </div>
+  </body>
+</html>
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m lxc config device [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kexit
+[?2004lexit
+
+Script done on 2025-05-01 12:08:28+03:00 [COMMAND_EXIT_CODE="0"]
