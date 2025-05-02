@@ -1,0 +1,139 @@
+Script started on 2025-05-01 11:38:48+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="179" LINES="44"]
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m init lxd[K[K[K[K[K[K[K[Klxd init
+[?2004lWould you like to use LXD clustering? (yes/no) [default=no]: 
+Do you want to configure a new storage pool? (yes/no) [default=yes]: 
+Name of the new storage pool [default=default]: 
+Name of the storage backend to use (btrfs, ceph, dir, lvm, powerflex) [default=btrfs]: dir
+Would you like to connect to a MAAS server? (yes/no) [default=no]: 
+Would you like to create a new local network bridge? (yes/no) [default=yes]: 
+What should the new bridge be called? [default=lxdbr0]: 
+What IPv4 address should be used? (CIDR subnet notation, “auto” or “none”) [default=auto]: 
+What IPv6 address should be used? (CIDR subnet notation, “auto” or “none”) [default=auto]: none
+Would you like the LXD server to be available over the network? (yes/no) [default=no]: 
+Would you like stale cached images to be updated automatically? (yes/no) [default=yes]: 
+Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]: yes
+config: {}
+networks:
+- config:
+    ipv4.address: auto
+    ipv6.address: none
+  description: ""
+  name: lxdbr0
+  type: ""
+  project: default
+storage_pools:
+- config: {}
+  description: ""
+  name: default
+  driver: dir
+storage_volumes: []
+profiles:
+- config: {}
+  description: ""
+  devices:
+    eth0:
+      name: eth0
+      network: lxdbr0
+      type: nic
+    root:
+      path: /
+      pool: default
+      type: disk
+  name: default
+projects: []
+cluster: null
+
+Error: Failed to create local member network "lxdbr0" in project "default": Failed generating auto config: Failed to automatically find an unused IPv4 subnet, manual configuration required
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m lxc storage list
+[?2004lIf this is your first time running LXD on this machine, you should also run: lxd init
+To start your first container, try: lxc launch ubuntu:24.04
+Or for a virtual machine: lxc launch ubuntu:24.04 --vm
+
++------+--------+--------+-------------+---------+-------+
+| NAME | DRIVER | SOURCE | DESCRIPTION | USED BY | STATE |
++------+--------+--------+-------------+---------+-------+
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m lxs [K[Kc network list
+[?2004l+--------+----------+---------+------+------+-------------+---------+-------+
+|  NAME  |   TYPE   | MANAGED | IPV4 | IPV6 | DESCRIPTION | USED BY | STATE |
++--------+----------+---------+------+------+-------------+---------+-------+
+| wlp1s0 | physical | NO      |      |      |             | 0       |       |
++--------+----------+---------+------+------+-------------+---------+-------+
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m sudo lxc storage create default dir
+[?2004l[sudo] пароль для tan: 
+If this is your first time running LXD on this machine, you should also run: lxd init
+To start your first container, try: lxc launch ubuntu:24.04
+Or for a virtual machine: lxc launch ubuntu:24.04 --vm
+
+Storage pool default created
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m sudo lxc profile device add default root disj[Kk path='[K/ pool+[K=default
+[?2004lDevice root added to default
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m lxc profile show default
+[?2004lname: default
+description: Default LXD profile
+config: {}
+devices:
+  root:
+    path: /
+    pool: default
+    type: disk
+used_by: []
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m lxc network create lxdbr0 \
+[?2004l[?2004h> ipv4.addres[K[K[K[Kdress=10.10.10.1\[K?[K|[K/24 \
+[?2004l[?2004h> ipv4.nat=true \
+[?2004l[?2004h> ipv4.dhcp=true \
+[?2004l[?2004h> ipv6.aa[Kddress=none
+[?2004lNetwork lxdbr0 created
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m lxc network list
+[?2004l+--------+----------+---------+---------------+------+-------------+---------+---------+
+|  NAME  |   TYPE   | MANAGED |     IPV4      | IPV6 | DESCRIPTION | USED BY |  STATE  |
++--------+----------+---------+---------------+------+-------------+---------+---------+
+| lxdbr0 | bridge   | YES     | 10.10.10.1/24 | none |             | 0       | CREATED |
++--------+----------+---------+---------------+------+-------------+---------+---------+
+| wlp1s0 | physical | NO      |               |      |             | 0       |         |
++--------+----------+---------+---------------+------+-------------+---------+---------+
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m sud[K[K[Klxc[K[K[Ksudo lxc[K[K[K[K[K[K[K[Klxc networl [K[Kk show lxdbr0
+[?2004lname: lxdbr0
+description: ""
+type: bridge
+managed: true
+status: Created
+config:
+  ipv4.address: 10.10.10.1/24
+  ipv4.dhcp: "true"
+  ipv4.nat: "true"
+  ipv6.address: none
+used_by: []
+locations:
+- none
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m sudo systemctl restart snap.lx.[Kd..[Kdaemon.[K
+[?2004l]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m lxc launch ubuntu[Ku:24.04 aboba-web
+[?2004lLaunching aboba-web
+Retrieving image: metadata: 100% (775.89MB/s)                                              Retrieving image: rootfs: 1% (3.96MB/s)                                              Retrieving image: rootfs: 2% (4.06MB/s)                                              Retrieving image: rootfs: 3% (4.02MB/s)                                              Retrieving image: rootfs: 4% (4.39MB/s)                                              Retrieving image: rootfs: 5% (4.79MB/s)                                              Retrieving image: rootfs: 6% (4.99MB/s)                                              Retrieving image: rootfs: 7% (5.07MB/s)                                              Retrieving image: rootfs: 8% (5.18MB/s)                                              Retrieving image: rootfs: 9% (5.39MB/s)                                              Retrieving image: rootfs: 10% (5.49MB/s)                                              Retrieving image: rootfs: 10% (5.58MB/s)                                              Retrieving image: rootfs: 11% (5.70MB/s)                                              Retrieving image: rootfs: 12% (5.67MB/s)                                              Retrieving image: rootfs: 13% (5.54MB/s)                                              Retrieving image: rootfs: 14% (5.46MB/s)                                              Retrieving image: rootfs: 15% (5.23MB/s)                                              Retrieving image: rootfs: 16% (5.25MB/s)                                              Retrieving image: rootfs: 17% (5.10MB/s)                                              Retrieving image: rootfs: 18% (5.00MB/s)                                              Retrieving image: rootfs: 19% (4.99MB/s)                                              Retrieving image: rootfs: 19% (4.87MB/s)                                              Retrieving image: rootfs: 20% (4.90MB/s)                                              Retrieving image: rootfs: 21% (4.94MB/s)                                              Retrieving image: rootfs: 22% (4.96MB/s)                                              Retrieving image: rootfs: 23% (4.74MB/s)                                              Retrieving image: rootfs: 24% (4.80MB/s)                                              Retrieving image: rootfs: 25% (4.84MB/s)                                              Retrieving image: rootfs: 26% (4.77MB/s)                                              Retrieving image: rootfs: 27% (4.74MB/s)                                              Retrieving image: rootfs: 28% (4.77MB/s)                                              Retrieving image: rootfs: 28% (4.81MB/s)                                              Retrieving image: rootfs: 29% (4.86MB/s)                                              Retrieving image: rootfs: 30% (4.91MB/s)                                              Retrieving image: rootfs: 31% (4.90MB/s)                                              Retrieving image: rootfs: 32% (4.95MB/s)                                              Retrieving image: rootfs: 33% (4.97MB/s)                                              Retrieving image: rootfs: 34% (4.99MB/s)                                              Retrieving image: rootfs: 35% (5.03MB/s)                                              Retrieving image: rootfs: 36% (5.09MB/s)                                              Retrieving image: rootfs: 37% (5.16MB/s)                                              Retrieving image: rootfs: 37% (5.15MB/s)                                              Retrieving image: rootfs: 38% (5.12MB/s)                                              Retrieving image: rootfs: 39% (5.14MB/s)                                              Retrieving image: rootfs: 40% (5.14MB/s)                                              Retrieving image: rootfs: 41% (5.07MB/s)                                              Retrieving image: rootfs: 42% (4.99MB/s)                                              Retrieving image: rootfs: 43% (4.97MB/s)                                              Retrieving image: rootfs: 44% (4.96MB/s)                                              Retrieving image: rootfs: 45% (4.96MB/s)                                              Retrieving image: rootfs: 46% (5.00MB/s)                                              Retrieving image: rootfs: 46% (5.03MB/s)                                              Retrieving image: rootfs: 47% (5.05MB/s)                                              Retrieving image: rootfs: 48% (5.04MB/s)                                              Retrieving image: rootfs: 49% (5.03MB/s)                                              Retrieving image: rootfs: 50% (5.04MB/s)                                              Retrieving image: rootfs: 51% (5.06MB/s)                                              Retrieving image: rootfs: 52% (5.07MB/s)                                              Retrieving image: rootfs: 53% (5.09MB/s)                                              Retrieving image: rootfs: 54% (5.10MB/s)                                              Retrieving image: rootfs: 55% (5.11MB/s)                                              Retrieving image: rootfs: 55% (5.12MB/s)                                              Retrieving image: rootfs: 56% (5.13MB/s)                                              Retrieving image: rootfs: 57% (5.14MB/s)                                              Retrieving image: rootfs: 58% (5.04MB/s)                                              Retrieving image: rootfs: 59% (5.09MB/s)                                              Retrieving image: rootfs: 60% (5.11MB/s)                                              Retrieving image: rootfs: 61% (5.13MB/s)                                              Retrieving image: rootfs: 62% (5.12MB/s)                                              Retrieving image: rootfs: 63% (5.14MB/s)                                              Retrieving image: rootfs: 64% (5.16MB/s)                                              Retrieving image: rootfs: 64% (5.18MB/s)                                              Retrieving image: rootfs: 65% (5.19MB/s)                                              Retrieving image: rootfs: 66% (5.21MB/s)                                              Retrieving image: rootfs: 67% (5.23MB/s)                                              Retrieving image: rootfs: 68% (5.21MB/s)                                              Retrieving image: rootfs: 69% (5.22MB/s)                                              Retrieving image: rootfs: 70% (5.20MB/s)                                              Retrieving image: rootfs: 71% (5.19MB/s)                                              Retrieving image: rootfs: 72% (5.18MB/s)                                              Retrieving image: rootfs: 73% (5.19MB/s)                                              Retrieving image: rootfs: 74% (5.21MB/s)                                              Retrieving image: rootfs: 74% (5.24MB/s)                                              Retrieving image: rootfs: 75% (5.25MB/s)                                              Retrieving image: rootfs: 76% (5.27MB/s)                                              Retrieving image: rootfs: 77% (5.30MB/s)                                              Retrieving image: rootfs: 78% (5.31MB/s)                                              Retrieving image: rootfs: 79% (5.32MB/s)                                              Retrieving image: rootfs: 80% (5.34MB/s)                                              Retrieving image: rootfs: 81% (5.36MB/s)                                              Retrieving image: rootfs: 82% (5.38MB/s)                                              Retrieving image: rootfs: 83% (5.41MB/s)                                              Retrieving image: rootfs: 83% (5.42MB/s)                                              Retrieving image: rootfs: 84% (5.44MB/s)                                              Retrieving image: rootfs: 85% (5.46MB/s)                                              Retrieving image: rootfs: 86% (5.49MB/s)                                              Retrieving image: rootfs: 87% (5.50MB/s)                                              Retrieving image: rootfs: 88% (5.51MB/s)                                              Retrieving image: rootfs: 89% (5.53MB/s)                                              Retrieving image: rootfs: 90% (5.54MB/s)                                              Retrieving image: rootfs: 91% (5.55MB/s)                                              Retrieving image: rootfs: 92% (5.56MB/s)                                              Retrieving image: rootfs: 92% (5.58MB/s)                                              Retrieving image: rootfs: 93% (5.59MB/s)                                              Retrieving image: rootfs: 94% (5.61MB/s)                                              Retrieving image: rootfs: 95% (5.63MB/s)                                              Retrieving image: rootfs: 96% (5.65MB/s)                                              Retrieving image: rootfs: 97% (5.66MB/s)                                              Retrieving image: rootfs: 98% (5.68MB/s)                                              Retrieving image: rootfs: 99% (5.69MB/s)                                              Retrieving image: rootfs: 100% (5.70MB/s)Retrieving image: Unpacking image: 100% (3.17GB/s)                                                   Retrieving image: Unpacking image: 100% (3.17GB/s)                                                   
+The instance you are starting doesn't have any network attached to it.
+  To create a new network, use: lxc network create
+  To attach a network to an instance, use: lxc network attach
+
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m lxc network attach lxdbr0 aboba-web eth0
+[?2004l]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m lxc ls
+[?2004l+-----------+---------+---------------------+------+-----------+-----------+
+|   NAME    |  STATE  |        IPV4         | IPV6 |   TYPE    | SNAPSHOTS |
++-----------+---------+---------------------+------+-----------+-----------+
+| aboba-web | RUNNING | 10.10.10.238 (eth0) |      | CONTAINER | 0         |
++-----------+---------+---------------------+------+-----------+-----------+
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m lxc abo[K[K[Kexec aboba-web -- ip a
+[?2004l1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+17: eth0@if18: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 00:16:3e:8a:39:33 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 10.10.10.238/24 metric 100 brd 10.10.10.255 scope global dynamic eth0
+       valid_lft 3573sec preferred_lft 3573sec
+    inet6 fe80::216:3eff:fe8a:3933/64 scope link 
+       valid_lft forever preferred_lft forever
+]0;tan@aboba:~[?2004h[32mtan@aboba[0m:[32m~[0m$[0m exit
+[?2004lexit
+
+Script done on 2025-05-01 11:54:25+03:00 [COMMAND_EXIT_CODE="0"]
