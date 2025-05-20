@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"disabled":false,"guestpath":"/vagrant","hostpath":"/home/tan/project8","type":"rsync","rsync__auto":true,"rsync__exclude":[".git/"],"__vagrantfile":true,"auto":true,"exclude":[".git/"],"owner":"vagrant","group":"vagrant"}}}
